@@ -1,0 +1,15 @@
+{
+  "name": "altjs-example-0",
+  "version": "0.0.1",
+  "description": "first react altjs example",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alt": "^0.18.2",
+    "react": "^0.14.7"
+  }
+}
