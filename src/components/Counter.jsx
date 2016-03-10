@@ -15,17 +15,31 @@ const CounterDisplay = React.createClass({
 });
 
 const CounterButtons = React.createClass({
+	pressTimer(){
+
+	},
 	increment(){
 		CounterActions.increment();
 	},
 	decrement(){
 		CounterActions.decrement();
 	},
+	longPress(e){
+		// var actionType = e.target.dataset.action;
+		// setTimeout(()=>this.startRepeat(actionType),400);
+	},
+	startRepeat(action){
+		// var that = this;
+		// this.pressTimer = window.setInterval(()=>that[action](),100);
+	},
+	stopRepeat(){
+		// clearInterval(this.pressTimer);
+	},
 	render(){
 		return (
 			<div>
-				<button onClick="{this.increment}">Increment</button>
-				<button onClick="{this.decrement}">Decrement</button>
+				<button onClick={this.increment} onMouseDown={this.longPress} onMouseUp={this.stopRepeat} data-action="increment">Increment</button>
+				<button onClick={this.decrement} onMouseDown={this.longPress} onMouseUp={this.stopRepeat} data-action="decrement">Decrement</button>
 			</div>
 		)
 	}
